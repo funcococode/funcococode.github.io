@@ -77,14 +77,25 @@ h2 {
     width: 100%;
 }
 
+#keyInput {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
-    #character {
-        font-size: 12px;
-        top: 32px;
-        left: 50%;
+    #keyInput {
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        transform: translate(-2%, -2%);
+        border: 1px solid rgb(68, 75, 99);
+        font-size: 15px;
+        padding: 10px 15px;
+        width: 93%
     }
-    #info {
-        display: none;
+    #info,
+    #character {
+        display: none
     }
     h2 {
         font-size: 18pt;
@@ -93,6 +104,7 @@ h2 {
     }
     #keycode {
         display: block;
+        margin-top: 70px;
     }
     #keycode>div {
         display: block;
