@@ -80,4 +80,5 @@ reset.addEventListener("click", (e) => {
     keyup.innerHTML = keydown.innerHTML = keypress.innerHTML = "code";
     infoKeyup.innerHTML = infoKeydown.innerHTML = infoKeypress.innerHTML = "";
     infoChar.innerHTML = ""
+    keyInput.value = ""
 })
