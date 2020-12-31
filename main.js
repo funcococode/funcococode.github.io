@@ -8,6 +8,8 @@ const infoKeyup = document.querySelector("#infoKeyup");
 const infoKeydown = document.querySelector("#infoKeydown");
 const infoKeypress = document.querySelector("#infoKeypress");
 
+const reset = document.querySelector("#resetBtn");
+
 addEventListener("keypress", (e) => {
     keypress.innerHTML = `${e.keyCode}`;
     infoChar.innerHTML = `Character : ${e.code}`;
@@ -70,4 +72,12 @@ keyInput.addEventListener("keydown", (e) => {
                     <br>Alt Key : <span style="color:${(e.altKey)?'green':'red'};text-transform:capitalize">${e.altKey}</span>
                     <br>Meta Key : <span style="color:${(e.metaKey)?'green':'red'};text-transform:capitalize">${e.metaKey}</span>
                     `
+})
+
+
+
+reset.addEventListener("click", (e) => {
+    keyup.innerHTML = keydown.innerHTML = keypress.innerHTML = "code";
+    infoKeyup.innerHTML = infoKeydown.innerHTML = infoKeypress.innerHTML = "";
+    infoChar.innerHTML = ""
 })
