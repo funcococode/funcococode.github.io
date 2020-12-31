@@ -56,8 +56,6 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 50px;
     font-size: 33pt;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     width: 100%;
 }
 
@@ -77,4 +75,27 @@ h2 {
     background: red;
     text-align: center;
     width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    #character {
+        font-size: 12px;
+        top: 32px;
+        left: 50%;
+    }
+    #info {
+        display: none;
+    }
+    h2 {
+        font-size: 18pt;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+    #keycode {
+        display: block;
+    }
+    #keycode>div {
+        display: block;
+        margin-top: 10px;
+    }
 }
