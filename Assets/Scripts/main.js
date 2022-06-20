@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('preloader').classList.add('hide');
     document.body.classList.remove('preloaderActive')
   }, 2000);
-  
+ 
+})
+
   if(window.location.pathname == '/contact.html') {
     loadMap();
   }
-  
-})
+
 
 const copyElements = document.querySelectorAll('.copy_able');
 
