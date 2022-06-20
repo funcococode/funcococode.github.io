@@ -46,3 +46,12 @@
     }
 }
 
+.cli:hover{
+    .copy_able{
+        transform:translateY(0%);
+    }
+}
+.copy_able{
+    transition: all .1s ease-in;
+    transform:translateY(100%);
+}

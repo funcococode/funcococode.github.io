@@ -75,4 +75,16 @@
     background-position: 0% 0%;
   }
 }
+
+.cli:hover .copy_able {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.copy_able {
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
 /*# sourceMappingURL=styles.css.map */

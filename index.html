@@ -12,42 +12,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-screen">
-    <section class="2xl:container grid grid-cols-3 mx-auto h-screen">
-        <div class="containerLeft col-span-2">
-            <nav class="grid grid-cols-4 items-center">
+    <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto lg:h-screen">
+        <div class="containerLeft lg:col-span-2">
+            <nav class="grid lg:grid-cols-4 items-center">
                 <div class="logo">
-                    <img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="">
+                    <a href="index.html"><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class=""></a>
                 </div>
-                <ul class="navItems col-span-3 grid grid-flow-col justify-end gap-3 pr-10">
-                    <!-- <a class="py-1 px-5 border border-2 border-indigo-800 text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
-                        Work
-                    </a> -->
-                    <a href="services.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                <ul class="navItems lg:col-span-3 grid grid-flow-col lg:gap-0 gap-3 lg:justify-end lg:gap-3 pr-10 lg:px-0 px-8">
+                    <a href="services.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Services
                     </a>
-                    <a href="contact.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                    <a href="contact.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Contact
                     </a>
                 </ul>
             </nav>
-            <main class="px-10">
-                <h2 class="text-6xl font-thin px-8 mt-12 mb-8 2xl:mb-24 leading-tight">
+            <main class="lg:px-10 lg:my-0 my-24">
+                <h2 class="text-3xl md:text-6xl font-thin px-8 mt-12 mb-8 2xl:mb-24 leading-tight">
                     Let's take your<br /><span class="font-black">creative ideas</span> along with your <span class="font-black">business</span> to the next level 
                 </h2>
-                <h5 class="px-8 text-2xl text-gray-500 border-l-8 border-indigo-700">
+                <h5 class="px-5 lg:px-8 text-lg md:text-3xl lg:text-2xl text-gray-500 border-l-8 border-indigo-700 lg:mt-0 mt-16">
                     We are a creative audio production studio focused on audio design,<br>brand specific audio imaging, corporate campaigns and everything related to audio. 
                 </h5>
-                <a href="Projects.html" class="block w-fit ml-10 mt-16 2xl:mt-24 py-3 px-10 hover:px-16 border-4 border-indigo-700 text-indigo-700 hover:bg-indigo-800 hover:text-white rounded-lg text-xl font-bold" style="transition:all 0.12s">Our Work &nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="Projects.html" class="grid grid-cols-8 items-center justify-items-center md:justify-items-start md:bg-white bg-indigo-800 text-white md:w-fit md:mr-0 mr-10 ml-10 mt-16 2xl:mt-24 py-3 px-10 hover:px-16 border-4 border-indigo-700 md:text-indigo-700 hover:bg-indigo-800 hover:text-white rounded-lg text-xl font-bold" style="transition:all 0.12s"><span class="block col-span-7">Our Work </span><i class="fa-solid fa-arrow-right col-span-1"></i></a>
             </main>
         </div>
-        <div class="containerRight bg-[url('imgs/patternpad.svg')] h-full bg-center bg-cover bg-no-repeat bg-center hover:bg-left-bottom" style="transition:all 2s;"></div>
+        <div class="lg:block hidden containerRight bg-[url('imgs/patternpad.svg')] h-full bg-center bg-cover bg-no-repeat bg-center hover:bg-left-bottom" style="transition:all 2s;"></div>
     </section>
     
-    <section class="2xl:container mx-auto" id="about_us_section">
+    <section class="2xl:container mx-auto lg:mt-0 mt-16" id="about_us_section">
         <div class="containerLeft h-full">
-            <main class="px-10 py-36 bg-gray-100 h-full">
+            <main class="lg:px-10 py-10 lg:py-36 bg-gray-100 h-full">
                 <h3 class="text-sm font-bold border-l-8 border-indigo-800 px-8 mt-12 mb-8 text-indigo-800">Our Thoughts</h3>
-                <h2 class="text-6xl font-thin px-8 mt-12 mb-8 leading-tight italic">
+                <h2 class="text-2xl lg:text-6xl font-thin px-8 mt-12 mb-8 leading-tight italic">
                     "As a Creative Audio Agency,<br>
                     our solutions are all part of one ecosystem,<br>
                     bringing <a href="#!" class="font-bold" data-micron="bounce">production</a>, <span class="font-bold ">corporates</span> and <span class="font-bold ">artists</span> all into one mix.<br>
@@ -74,25 +71,25 @@
         </ul>
     </section>
     
-    <footer class="2xl:container mx-auto grid grid-cols-8 items-center bg-gray-200">
+    <footer class="2xl:container mx-auto grid lg:grid-cols-8 items-center bg-gray-200">
         <div class="col-span-2">
-            <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="w-full"></center>
+            <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="lg:w-full w-1/2"></center>
         </div>
-        <div class="col-span-6 grid grid-cols-4">
-            <div class="col-span-2"></div>
-            <ul class="py-16 pr-16 grid justify-end">
-                <a href="index.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
-                <a href="services.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
-                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a>
-                <a href="Projects.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Projects</a>
-                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Gallery</a>
+        <div class="col-span-6 grid grid-cols-2 lg:grid-cols-4 pb-16 lg:pb-0">
+            <div class="lg:col-span-2 hidden lg:block"></div> 
+            <ul class="lg:py-16 pr-16 px-8">
+                <a href="index.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
+                <a href="services.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
+                <!-- <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a> -->
+                <a href="Projects.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Projects</a>
+                <!-- <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Gallery</a> -->
             </ul>
-            <ul class="py-16 pr-16">
+            <ul class="lg:py-16 pr-16 px-8 lg:px-0 grid">
                 <a href="index.html#about_us_section" class="block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">About us</a>
                 <a href="contact.html" class="block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Contact Us</a>
                 <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Terms of Services</li>
                 <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Privacy Policy</li>
-                <ul class="px-2 my-5">
+                <ul class="px-2 my-5 lg:block hidden">
                     <li class="inline-block text-xl mr-2"><i class="fab fa-instagram"></i></li>
                     <li class="inline-block text-xl mr-2"><i class="fab fa-facebook-f"></i></li>
                     <li class="inline-block text-xl mr-2"><i class="fab fa-youtube"></i></li>

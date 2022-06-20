@@ -1,21 +1,5 @@
 // AIzaSyAJNAD0UlLmeqMdaB72v1hZm6wgKAmidNA
 
-// Initialize and add the map
-// function initMap() {
-//     // The location of Uluru
-//     const StudioHR = { lat: 22.718251479538928, lng: 75.88473309787932 };
-//     // The map, centered at StudioHR
-//     const map = new google.maps.Map(document.getElementById("map"), {
-//       zoom: 18,
-//       center: StudioHR,
-//     });
-//     // The marker, positioned at StudioHR
-//     const marker = new google.maps.Marker({
-//       position: StudioHR,
-//       map: map,
-//     });
-//   }
-
 // position we will use later
 var lat = 22.718251479538928;
 var lon = 75.88473309787932;
@@ -30,3 +14,20 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 marker = L.marker([lat, lon]).addTo(map);
 // add popup to the marker
 marker.bindPopup("<b>Studio HR</b><br />Indore").openPopup()
+
+
+const copyElements = document.querySelectorAll('.copy_able');
+
+copyElements.forEach(element => element.addEventListener('click',function(e){
+    const copyText = e.target.parentElement.children[1].innerText;
+    navigator.clipboard.writeText(copyText).then(function() {
+        e.target.innerHTML = '<i class="fa-solid fa-check-double col-span-1"></i> Copied!';
+        e.target.classList.add('bg-green-500')
+        setTimeout(()=>{
+            e.target.innerHTML = '<i class="fa-solid fa-clone col-span-1"></i> Click to Copy!';
+            e.target.classList.remove('bg-green-500')
+        },1000)
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+      });
+}));

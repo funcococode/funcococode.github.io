@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="./Assets/Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,53 +12,63 @@
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJNAD0UlLmeqMdaB72v1hZm6wgKAmidNA&callback=initMap"></script> -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body class="h-screen">
-    <section class="2xl:container grid grid-cols-3 mx-auto h-screen">
-        <div class="containerLeft col-span-2">
-            <nav class="grid grid-cols-4 items-center">
+    <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto lg:h-screen">
+        <div class="containerLeft lg:col-span-2">
+            <nav class="grid lg:grid-cols-4 items-center">
                 <div class="logo">
-                    <a href="/index.html">
-                        <img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="">
-                    </a>
+                    <a href="index.html"><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class=""></a>
                 </div>
-                <ul class="navItems col-span-3 grid grid-flow-col justify-end gap-3 pr-10">
-                    <a href="Projects.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                <ul class="navItems lg:col-span-3 grid grid-flow-col lg:gap-0 gap-3 lg:justify-end lg:gap-3 pr-10 lg:px-0 px-8">
+                    <a href="Projects.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Projects
                     </a>
-                    <a href="services.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                    <a href="services.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Services
                     </a>
-                    <a href="contact.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                    <a href="contact.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Contact
                     </a>
                 </ul>
             </nav>
-            <main class="px-10 mt-10">
+            <main class="lg:px-10 lg:my-0 my-24">
                 <p class="px-8 border-l-8 border-indigo-800 text-gray-500 text-2xl font-thin">
                     <span class="font-bold text-indigo-800 text-sm mb-5 block">Oh! look who is here 😉 </span>
                     Well, we believe in making good connections with our clients<br />Use any of the provided options below to connect with us<br/>We will be happy to render your ideas and thoughts to <span class="font-bold text-indigo-800">.wav</span> and <span class="font-bold text-indigo-800">.mp3</span>
                 </p>
-                <ul class="px-8 mt-10 grid grid-cols-2 gap-3 mt-16">
-                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                <ul class="px-8 mt-10 flex flex-col md:grid grid-cols-2 gap-3 mt-16">
+                    <li class="overflow-hidden cli relative cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
                         <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
                             <i class="fa-solid fa-at"></i>
                         </h3>
-                        <p class="col-span-9 font-medium text-xl text-gray-500 group-hover:text-indigo-800">studiohr.music11@gmail.com</p>
+                        <p class=" col-span-9 font-medium text-xl text-gray-500 group-hover:text-indigo-800">contact@studiohr.in</p>
+                        <div class="copy_able grid grid-cols-3 absolute inset-0 font-bold text-xl bg-indigo-800 text-white grid items-center justify-items-center">
+                            <i class="fa-solid fa-clone col-span-1"></i> Click to copy
+                        </div>
                     </li>                    
-                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                    <li class="overflow-hidden cli relative cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
                         <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
                             <i class="fa-solid fa-phone"></i>
                         </h3>
-                        <p class="col-span-9 font-medium text-xl text-gray-500 group-hover:text-indigo-800">+91-8085850222</p>
+                        <p class=" col-span-9 font-medium text-xl text-gray-500 group-hover:text-indigo-800">+91-8085850222</p>
+                        <div class="copy_able grid grid-cols-3 absolute inset-0 font-bold text-xl bg-indigo-800 text-white grid items-center justify-items-center">
+                            <i class="fa-solid fa-clone col-span-1"></i> Click to copy
+                        </div>
                     </li>                    
-                    <li class="col-span-2 cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
-                        <h3 class="transition group-hover:text-indigo-800 col-span-2 text-5xl font-thin text-gray-200">
+                    <li class="overflow-hidden cli relative col-span-2 cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                        <h3 class="transition group-hover:text-indigo-800 col-span-3 md:col-span-2 text-5xl font-thin text-gray-200">
                             <i class="fa-solid fa-location-dot"></i>
                         </h3>
-                        <p class="col-span-10 font-medium text-xl text-gray-500 group-hover:text-indigo-800">
+                        <p class=" col-span-9 md:col-span-10 font-medium text-xl text-gray-500 group-hover:text-indigo-800">
                             Studio HR, Incisive Finishing school, Alankar Point, 102, Gita Bhawan Rd, Rajgarh Kothi, Indore GPO, Indore, Madhya Pradesh 452001
                         </p>
+                        <div class="copy_able grid grid-cols-3 absolute inset-0 font-bold text-xl bg-indigo-800 text-white grid items-center justify-items-center">
+                            <i class="fa-solid fa-clone col-span-1"></i> Click to copy
+                        </div>
                     </li>                    
                     <ul class="flex col-span-2 gap-3">
                         <a class="cursor-pointer text-3xl text-gray-500 hover:text-indigo-800 p-5 flex-1 border-2 grid justify-items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition"><i class="fab fa-instagram"></i></a>
@@ -70,31 +80,31 @@
                 </ul>
             </main>
         </div>
-        <div class="h-full" id="mapDiv"></div>
+        <div class="h-full lg:block hidden" id="mapDiv"></div>
         <!-- <div class="containerRight bg-[url('imgs/contact_pic.svg')] h-full bg-center bg-cover bg-no-repeat bg-center hover:bg-left-bottom" style="transition:all 2s;"></div> -->
     </section>
     
     
     
-    <footer class="2xl:container mx-auto grid grid-cols-8 items-center bg-gray-200">
+    <footer class="2xl:container mx-auto grid lg:grid-cols-8 items-center bg-gray-200">
         <div class="col-span-2">
-            <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="w-full"></center>
+            <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="lg:w-full w-1/2"></center>
         </div>
-        <div class="col-span-6 grid grid-cols-4">
-            <div class="col-span-2"></div>
-            <ul class="py-16 pr-16 grid justify-end">
-                <a href="index.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
-                <a href="services.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
-                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a>
-                <a href="Projects.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Projects</a>
-                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Gallery</a>
+        <div class="col-span-6 grid grid-cols-2 lg:grid-cols-4 pb-16 lg:pb-0">
+            <div class="lg:col-span-2 hidden lg:block"></div> 
+            <ul class="lg:py-16 pr-16 px-8">
+                <a href="index.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
+                <a href="services.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
+                <!-- <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a> -->
+                <a href="Projects.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Projects</a>
+                <!-- <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Gallery</a> -->
             </ul>
-            <ul class="py-16 pr-16">
+            <ul class="lg:py-16 pr-16 px-8 lg:px-0 grid">
                 <a href="index.html#about_us_section" class="block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">About us</a>
                 <a href="contact.html" class="block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Contact Us</a>
                 <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Terms of Services</li>
                 <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Privacy Policy</li>
-                <ul class="px-2 my-5">
+                <ul class="px-2 my-5 lg:block hidden">
                     <li class="inline-block text-xl mr-2"><i class="fab fa-instagram"></i></li>
                     <li class="inline-block text-xl mr-2"><i class="fab fa-facebook-f"></i></li>
                     <li class="inline-block text-xl mr-2"><i class="fab fa-youtube"></i></li>
