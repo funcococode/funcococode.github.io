@@ -1,45 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keycode Finder</title>
-    <link rel="shortcut icon" href="./favicon_io/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Studio HR</title>
 
-<body>
-    <h1 class="logo">
-        <img src="./favicon_io/favicon-32x32.png" alt="">
-        <p>Keycode Finder.</p>
-    </h1>
-    <button id="resetBtn"><i class="fas fa-trash-alt"></i> &nbsp;Reset</button>
-    <h2>Press any key to find its respective keycode.</h2>
-    <input type="text" id="keyInput" placeholder="Start Typing Here...">
-    <div id="character"></div>
-    <div id="info">
-        <div id="infoKeydown"></div>
-        <div id="infoKeypress"></div>
-        <div id="infoKeyup"></div>
-    </div>
-    <div id="keycode">
-        <div>
-            <p>Key Down</p>
-            <div id="keydown" style="background-color: rgb(126, 223, 191);color:black">code</div>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen">
+    <section class="2xl:container grid grid-cols-3 mx-auto h-screen">
+        <div class="containerLeft col-span-2">
+            <nav class="grid grid-cols-4 items-center">
+                <div class="logo">
+                    <img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="">
+                </div>
+                <ul class="navItems col-span-3 grid grid-flow-col justify-end gap-3 pr-10">
+                    <!-- <a class="py-1 px-5 border border-2 border-indigo-800 text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Work
+                    </a> -->
+                    <a href="services.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Services
+                    </a>
+                    <a href="contact.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Contact
+                    </a>
+                </ul>
+            </nav>
+            <main class="px-10">
+                <h2 class="text-6xl font-thin px-8 mt-12 mb-8 2xl:mb-24 leading-tight">
+                    Let's take your<br /><span class="font-black">creative ideas</span> along with your <span class="font-black">business</span> to the next level 
+                </h2>
+                <h5 class="px-8 text-2xl text-gray-500 border-l-8 border-indigo-700">
+                    We are a creative audio production studio focused on audio design,<br>brand specific audio imaging, corporate campaigns and everything related to audio. 
+                </h5>
+                <a href="Projects.html" class="block w-fit ml-10 mt-16 2xl:mt-24 py-3 px-10 hover:px-16 border-4 border-indigo-700 text-indigo-700 hover:bg-indigo-800 hover:text-white rounded-lg text-xl font-bold" style="transition:all 0.12s">Our Work &nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+            </main>
         </div>
-        <div>
-            <p>Key Press</p>
-            <div id="keypress" style="background-color: rgb(181, 223, 126);color:black">code</div>
+        <div class="containerRight bg-[url('imgs/patternpad.svg')] h-full bg-center bg-cover bg-no-repeat bg-center hover:bg-left-bottom" style="transition:all 2s;"></div>
+    </section>
+    
+    <section class="2xl:container mx-auto" id="about_us_section">
+        <div class="containerLeft h-full">
+            <main class="px-10 py-36 bg-gray-100 h-full">
+                <h3 class="text-sm font-bold border-l-8 border-indigo-800 px-8 mt-12 mb-8 text-indigo-800">Our Thoughts</h3>
+                <h2 class="text-6xl font-thin px-8 mt-12 mb-8 leading-tight italic">
+                    "As a Creative Audio Agency,<br>
+                    our solutions are all part of one ecosystem,<br>
+                    bringing <a href="#!" class="font-bold" data-micron="bounce">production</a>, <span class="font-bold ">corporates</span> and <span class="font-bold ">artists</span> all into one mix.<br>
+                    You need <span class="font-bold ">creative solutions</span> to<br>
+                    enhance your artist / brand image,<br>
+                    but you also need people to listen.<br>
+                    This is where we come in.
+                    We have a team of <span class="font-bold ">professionals</span> from major radio stations,<br>
+                    <span class="font-bold ">podcast</span> creators, bollywood <span class="font-bold ">music</span> producers , <span class="font-bold ">sound designers & mastering engineers</span><br> 
+                    to get your artist’s / brand’s voice exactly where it needs to be. It’s vital to get your voice & ideas heard, and <span class="font-bold text-indigo-800">we’ll make it happen for you.</span> "
+                </h2>
+            </main>
         </div>
-        <div>
-            <p>Key Up</p>
-            <div id="keyup" style="background-color: rgb(126, 176, 223);color:black">code</div>
+    </section>
+    
+    
+    <section class="2xl:container mx-auto h-screen linksSection grid grid-cols-3 hidden">
+        <div></div>
+        <ul class="grid items-center h-full p-24 2xl:p-64 col-span-2">
+            <a href="projects.html" class="w-full px-5 py-3 text-7xl 2xl:text-4xl font-thin hover:font-bold hover:pl-32 text-stroked"><i class="fas fa-arrow-right _45Degree"></i> &nbsp; Projects</a>
+            <li class="w-full px-5 py-3 text-7xl 2xl:text-4xl font-thin hover:font-bold hover:pl-32 text-stroked"><i class="fas fa-arrow-right _45Degree"></i> &nbsp; Equipments</li>
+            <li class="w-full px-5 py-3 text-5xl 2xl:text-4xl text-gray-400 font-thin"><i class="fas fa-minus"></i> &nbsp; Music Player (Coming Soon)</li>
+            <li class="w-full px-5 py-3 text-5xl 2xl:text-4xl text-gray-400 font-thin"><i class="fas fa-minus"></i> &nbsp; Gallery (Coming Soon)</li>
+        </ul>
+    </section>
+    
+    <footer class="2xl:container mx-auto grid grid-cols-8 items-center bg-gray-200">
+        <div class="col-span-2">
+            <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="w-full"></center>
         </div>
-    </div>
+        <div class="col-span-6 grid grid-cols-4">
+            <div class="col-span-2"></div>
+            <ul class="py-16 pr-16 grid justify-end">
+                <a href="index.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
+                <a href="services.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
+                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a>
+                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Gallery</a>
+                <a href="index.html#about_us_section" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">About us</a>
+                <a href="contact.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Contact Us</a>
+            </ul>
+            <ul class="py-16 pr-16">
+                <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Terms of Services</li>
+                <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Privacy Policy</li>
+                <ul class="px-2 my-5">
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-instagram"></i></li>
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-facebook-f"></i></li>
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-youtube"></i></li>
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-spotify"></i></li>
+                </ul>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const micron = require('webkul-micron');
+
+    </script>
 
     <script src="main.js"></script>
 </body>
-
 </html>

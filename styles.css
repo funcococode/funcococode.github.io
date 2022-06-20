@@ -1,0 +1,78 @@
+.text-stroked {
+  color: black;
+  cursor: pointer;
+  margin-bottom: 35px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.text-stroked:hover {
+  color: #18e2bd;
+}
+
+.text-stroked:hover ._45Degree {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+}
+
+.linksSection {
+  background-image: url("./imgs/new.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+._45Degree {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.containerRight {
+  -webkit-clip-path: ellipse(50% 40% at 84% 1%);
+          clip-path: ellipse(50% 40% at 84% 1%);
+  -webkit-animation: clipAnim infinite 20s alternate;
+          animation: clipAnim infinite 20s alternate;
+  background-blend-mode: difference;
+}
+
+@-webkit-keyframes clipAnim {
+  0% {
+    background-color: blue;
+    -webkit-clip-path: ellipse(50% 40% at 84% 50%);
+            clip-path: ellipse(50% 40% at 84% 50%);
+  }
+  50% {
+    background-color: #0c5226;
+    -webkit-clip-path: ellipse(81% 57% at 82% 14%);
+            clip-path: ellipse(81% 57% at 82% 14%);
+    background-position: 50% -20%;
+  }
+  100% {
+    background-color: white;
+    -webkit-clip-path: ellipse(51% 57% at 102% 95%);
+            clip-path: ellipse(51% 57% at 102% 95%);
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes clipAnim {
+  0% {
+    background-color: blue;
+    -webkit-clip-path: ellipse(50% 40% at 84% 50%);
+            clip-path: ellipse(50% 40% at 84% 50%);
+  }
+  50% {
+    background-color: #0c5226;
+    -webkit-clip-path: ellipse(81% 57% at 82% 14%);
+            clip-path: ellipse(81% 57% at 82% 14%);
+    background-position: 50% -20%;
+  }
+  100% {
+    background-color: white;
+    -webkit-clip-path: ellipse(51% 57% at 102% 95%);
+            clip-path: ellipse(51% 57% at 102% 95%);
+    background-position: 0% 0%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

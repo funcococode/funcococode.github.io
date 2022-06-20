@@ -1,84 +1,32 @@
-const keyup = document.querySelector("#keyup");
-const keypress = document.querySelector("#keypress");
-const keydown = document.querySelector("#keydown");
-const keyInput = document.querySelector("#keyInput")
+// AIzaSyAJNAD0UlLmeqMdaB72v1hZm6wgKAmidNA
 
-const infoChar = document.querySelector("#character");
-const infoKeyup = document.querySelector("#infoKeyup");
-const infoKeydown = document.querySelector("#infoKeydown");
-const infoKeypress = document.querySelector("#infoKeypress");
+// Initialize and add the map
+// function initMap() {
+//     // The location of Uluru
+//     const StudioHR = { lat: 22.718251479538928, lng: 75.88473309787932 };
+//     // The map, centered at StudioHR
+//     const map = new google.maps.Map(document.getElementById("map"), {
+//       zoom: 18,
+//       center: StudioHR,
+//     });
+//     // The marker, positioned at StudioHR
+//     const marker = new google.maps.Marker({
+//       position: StudioHR,
+//       map: map,
+//     });
+//   }
 
-const reset = document.querySelector("#resetBtn");
-
-addEventListener("keypress", (e) => {
-    keypress.innerHTML = `${e.keyCode}`;
-    infoChar.innerHTML = `Character : ${e.code}`;
-    infoKeypress.innerHTML = `
-                    <br>Shift Key : <span style="color:${(e.shiftKey)?'green':'red'};text-transform:capitalize"> ${e.shiftKey} </span>
-                    <br>Ctrl Key : <span style="color:${(e.ctrlKey)?'green':'red'};text-transform:capitalize">${e.ctrlKey}</span>
-                    <br>Alt Key : <span style="color:${(e.altKey)?'green':'red'};text-transform:capitalize">${e.altKey}</span>
-                    <br>Meta Key : <span style="color:${(e.metaKey)?'green':'red'};text-transform:capitalize">${e.metaKey}</span>
-                    `
-})
-
-addEventListener("keyup", (e) => {
-    keyup.innerHTML = `${e.keyCode}`;
-    infoKeyup.innerHTML = `
-                    <br>Shift Key : <span style="color:${(e.shiftKey)?'green':'red'};text-transform:capitalize"> ${e.shiftKey} </span>
-                    <br>Ctrl Key : <span style="color:${(e.ctrlKey)?'green':'red'};text-transform:capitalize">${e.ctrlKey}</span>
-                    <br>Alt Key : <span style="color:${(e.altKey)?'green':'red'};text-transform:capitalize">${e.altKey}</span>
-                    <br>Meta Key : <span style="color:${(e.metaKey)?'green':'red'};text-transform:capitalize">${e.metaKey}</span>
-                    `
-})
-addEventListener("keydown", (e) => {
-
-    keydown.innerHTML = `${e.keyCode}`;
-    infoKeydown.innerHTML = `
-                    <br>Shift Key : <span style="color:${(e.shiftKey)?'green':'red'};text-transform:capitalize"> ${e.shiftKey} </span>
-                    <br>Ctrl Key : <span style="color:${(e.ctrlKey)?'green':'red'};text-transform:capitalize">${e.ctrlKey}</span>
-                    <br>Alt Key : <span style="color:${(e.altKey)?'green':'red'};text-transform:capitalize">${e.altKey}</span>
-                    <br>Meta Key : <span style="color:${(e.metaKey)?'green':'red'};text-transform:capitalize">${e.metaKey}</span>
-                    `
-})
-
-
-
-keyInput.addEventListener("keypress", (e) => {
-    keypress.innerHTML = `${e.keyCode}`;
-    infoChar.innerHTML = `Character : ${e.code}`;
-    infoKeypress.innerHTML = `
-                    <br>Shift Key : <span style="color:${(e.shiftKey)?'green':'red'};text-transform:capitalize"> ${e.shiftKey} </span>
-                    <br>Ctrl Key : <span style="color:${(e.ctrlKey)?'green':'red'};text-transform:capitalize">${e.ctrlKey}</span>
-                    <br>Alt Key : <span style="color:${(e.altKey)?'green':'red'};text-transform:capitalize">${e.altKey}</span>
-                    <br>Meta Key : <span style="color:${(e.metaKey)?'green':'red'};text-transform:capitalize">${e.metaKey}</span>
-                    `
-})
-
-keyInput.addEventListener("keyup", (e) => {
-    keyup.innerHTML = `${e.keyCode}`;
-    infoKeyup.innerHTML = `
-                    <br>Shift Key : <span style="color:${(e.shiftKey)?'green':'red'};text-transform:capitalize"> ${e.shiftKey} </span>
-                    <br>Ctrl Key : <span style="color:${(e.ctrlKey)?'green':'red'};text-transform:capitalize">${e.ctrlKey}</span>
-                    <br>Alt Key : <span style="color:${(e.altKey)?'green':'red'};text-transform:capitalize">${e.altKey}</span>
-                    <br>Meta Key : <span style="color:${(e.metaKey)?'green':'red'};text-transform:capitalize">${e.metaKey}</span>
-                    `
-})
-keyInput.addEventListener("keydown", (e) => {
-
-    keydown.innerHTML = `${e.keyCode}`;
-    infoKeydown.innerHTML = `
-                    <br>Shift Key : <span style="color:${(e.shiftKey)?'green':'red'};text-transform:capitalize"> ${e.shiftKey} </span>
-                    <br>Ctrl Key : <span style="color:${(e.ctrlKey)?'green':'red'};text-transform:capitalize">${e.ctrlKey}</span>
-                    <br>Alt Key : <span style="color:${(e.altKey)?'green':'red'};text-transform:capitalize">${e.altKey}</span>
-                    <br>Meta Key : <span style="color:${(e.metaKey)?'green':'red'};text-transform:capitalize">${e.metaKey}</span>
-                    `
-})
-
-
-
-reset.addEventListener("click", (e) => {
-    keyup.innerHTML = keydown.innerHTML = keypress.innerHTML = "code";
-    infoKeyup.innerHTML = infoKeydown.innerHTML = infoKeypress.innerHTML = "";
-    infoChar.innerHTML = ""
-    keyInput.value = ""
-})
+// position we will use later
+var lat = 22.718251479538928;
+var lon = 75.88473309787932;
+// initialize map
+map = L.map('mapDiv').setView([lat, lon], 18);
+// set map tiles source
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+}).addTo(map);
+// add marker to the map
+marker = L.marker([lat, lon]).addTo(map);
+// add popup to the marker
+marker.bindPopup("<b>Studio HR</b><br />Indore").openPopup()

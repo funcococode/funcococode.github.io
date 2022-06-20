@@ -1,0 +1,48 @@
+.text-stroked{
+    color: rgb(0, 0, 0);
+    cursor:pointer;
+    margin-bottom: 35px;
+    transition: all 0.25s;
+    
+    &:hover{
+        color: #18e2bd;
+        ._45Degree{
+            transform:rotateZ(0deg);
+        }
+    }
+}
+
+.linksSection{
+    background-image: url('./imgs/new.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+._45Degree{
+    transform:rotateZ(-45deg);
+    transition: all 0.25s;
+}
+
+.containerRight{
+    clip-path: ellipse(50% 40% at 84% 1%);
+    animation: clipAnim infinite 20s alternate;
+    background-blend-mode: difference;
+}
+
+@keyframes clipAnim {
+    0%{
+        background-color: blue;
+        clip-path: ellipse(50% 40% at 84% 50%);
+    }
+    50%{
+        background-color: rgb(12, 82, 38);
+        clip-path: ellipse(81% 57% at 82% 14%);
+        background-position: 50% -20%;
+    }
+    100%{
+        background-color: rgb(255, 255, 255);
+        clip-path: ellipse(51% 57% at 102% 95%);
+        background-position: 0% 0%;
+    }
+}
+

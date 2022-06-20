@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen">
+    <section class="2xl:container grid grid-cols-3 mx-auto h-screen">
+        <div class="containerLeft col-span-2">
+            <nav class="grid grid-cols-4 items-center">
+                <div class="logo">
+                    <a href="/index.html">
+                        <img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="">
+                    </a>
+                </div>
+                <ul class="navItems col-span-3 grid grid-flow-col justify-end gap-3 pr-10">
+                    <a href="Projects.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Projects
+                    </a>
+                    <a href="services.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Services
+                    </a>
+                    <a href="contact.html" class="py-1 px-5 font-bold border-indigo-800 text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Contact
+                    </a>
+                </ul>
+            </nav>
+            <main class="px-10 mt-10">
+                <p class="px-8 border-l-8 border-indigo-800 text-gray-500 text-2xl font-thin">
+                    <span class="font-bold text-indigo-800 text-sm mb-5 block">Awesome things we can do for you 🤩 </span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="font-black text-black">Dignissimos</span> corrupti quam dicta velit,  distinctio <span class="font-black text-black">similique</span> exercitationem ea repellat accusantium laboriosam <span class="font-black text-black">perspiciatis</span> quod architecto esse accusamus <span class="font-black text-black">necessitatibus</span> fugiat. Nulla?
+                </p>
+                <ul class="px-8 mt-10 grid grid-cols-2 gap-3 mt-16">
+                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                        <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </h3>
+                        <p class="col-span-9 font-medium text-3xl text-gray-500 group-hover:text-indigo-800">Music Production</p>
+                    </li>
+                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                        <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
+                            <i class="fa-solid fa-music"></i>
+                        </h3>
+                        <p class="col-span-9 font-medium text-3xl text-gray-500 group-hover:text-indigo-800">Music Composition</p>
+                    </li>
+                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                        <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                        </h3>
+                        <p class="col-span-9 font-medium text-3xl text-gray-500 group-hover:text-indigo-800">Audio Recording</p>
+                    </li>
+                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                        <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
+                            <i class="fa-solid fa-sliders"></i>
+                        </h3>
+                        <p class="col-span-9 font-medium text-3xl text-gray-500 group-hover:text-indigo-800">Mixing & Mastering</p>
+                    </li>
+                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                        <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
+                            <i class="fa-solid fa-podcast"></i>
+                        </h3>
+                        <p class="col-span-9 font-medium text-3xl text-gray-500 group-hover:text-indigo-800">Podcasts</p>
+                    </li>
+                    <li class="cursor-pointer group border-2 p-5 grid grid-cols-12 items-center shadow-sm rounded-lg hover:border-indigo-800 hover:shadow-lg transition">
+                        <h3 class="transition group-hover:text-indigo-800 col-span-3 text-5xl font-thin text-gray-200">
+                            <i class="fa-solid fa-guitar"></i>
+                        </h3>
+                        <p class="col-span-9 font-medium text-3xl text-gray-500 group-hover:text-indigo-800">BGM & Scores</p>
+                    </li>
+                    
+                </ul>
+            </main>
+        </div>
+        <div class="containerRight bg-[url('imgs/services_pic.svg')] h-full bg-center bg-cover bg-no-repeat bg-center hover:bg-left-bottom" style="transition:all 2s;"></div>
+    </section>
+    
+    
+    
+    <footer class="2xl:container mx-auto grid grid-cols-8 items-center bg-gray-200">
+        <div class="col-span-2">
+            <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="w-full"></center>
+        </div>
+        <div class="col-span-6 grid grid-cols-4">
+            <div class="col-span-2"></div>
+            <ul class="py-16 pr-16 grid justify-end">
+                <a href="index.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
+                <a href="services.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
+                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a>
+                <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Gallery</a>
+                <a href="index.html#about_us_section" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">About us</a>
+                <a href="contact.html" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Contact Us</a>
+            </ul>
+            <ul class="py-16 pr-16">
+                <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Terms of Services</li>
+                <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Privacy Policy</li>
+                <ul class="px-2 my-5">
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-instagram"></i></li>
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-facebook-f"></i></li>
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-youtube"></i></li>
+                    <li class="inline-block text-xl mr-2"><i class="fab fa-spotify"></i></li>
+                </ul>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
