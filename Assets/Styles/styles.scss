@@ -55,3 +55,39 @@
     transition: all .1s ease-in;
     transform:translateY(100%);
 }
+
+
+
+
+.preloaderActive{
+    overflow: hidden;
+}
+
+#preloader{
+    z-index: 100;
+    transition: all 1s;
+    &.hide{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.loader{
+    animation: loadingAnim 1s infinite alternate ease-in-out;
+    div{
+        width:30px;
+        height:30px;
+        animation: loadingAnim 2s infinite alternate ease-in-out;
+    }
+}
+
+@keyframes loadingAnim {
+    from{
+        transform: rotate(0deg) scale(1);
+        border-radius: 0;
+    }
+    to{
+        border-radius: 50%;
+        transform: rotate(360deg) scale(0.8);
+    }
+}
