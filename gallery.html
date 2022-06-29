@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-screen preloaderActive">
-    <div id="preloader" class="absolute inset-0 bg-indigo-800 flex items-center justify-center">
+<body class="h-screen">
+    <!-- <div id="preloader" class="absolute inset-0 bg-indigo-800 flex items-center justify-center">
         <div class="loader grid grid-cols-2 gap-2 border-4 border-indigo-700 p-4">
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
         </div>
-    </div>
-    <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto lg:h-screen">
+    </div> -->
+    <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto">
         <div class="containerLeft lg:col-span-2">
             <nav class="grid lg:grid-cols-4 items-center">
                 <div class="logo">
@@ -37,51 +37,21 @@
                     </a>
                 </ul>
             </nav>
-            <main class="lg:px-10 lg:my-16 my-24">
-                <h2 class="text-3xl md:text-6xl font-thin px-8 mt-12 mb-8 lg:mb-24 leading-tight">
-                    Let's take your<br /><span class="font-black">creative ideas</span> along with your <span class="font-black">business</span> to the next level 
-                </h2>
-                <h5 class="px-5 lg:px-8 text-lg md:text-3xl lg:text-2xl text-gray-500 border-l-8 border-indigo-700 lg:mt-0 mt-16">
-                    We are a creative audio production studio focused on audio design,<br>brand specific audio imaging, corporate campaigns and everything related to audio. 
-                </h5>
-                <a href="Projects.html" class="grid grid-cols-8 items-center justify-items-center md:justify-items-start md:bg-white bg-indigo-800 text-white md:w-fit md:mr-0 mr-10 ml-10 mt-16 2xl:mt-24 py-3 px-10 hover:px-16 border-4 border-indigo-700 md:text-indigo-700 hover:bg-indigo-800 hover:text-white rounded-lg text-xl font-bold" style="transition:all 0.12s"><span class="block col-span-7">Our Work </span><i class="fa-solid fa-arrow-right col-span-1"></i></a>
+            <main class="px-10 lg:my-16 my-24">
+                <div class="gap-8 lg:columns-4 md:columns-2 column-3s mb-8">
+                    <img class="mb-8" src="./imgs/studio 1.jpg" />
+                    <img class="mb-8" src="./imgs/studio 2.jpg" />
+                    <img class="mb-8" src="./imgs/studio 3.jpg" />
+                    <img class="mb-8" src="./imgs/studio 4.jpg" />
+                    <img class="mb-8" src="./imgs/studio 5.jpg" />
+                    <img class="mb-8" src="./imgs/studio 6.jpg" />
+                </div>
             </main>
         </div>
         <div class="lg:block hidden containerRigh h-full">
             <iframe src='https://my.spline.design/noisedisplacecopy-98d1940b68d2ccab9a5c0307155e3d69/' frameborder='0' width='100%' height='100%'></iframe>
         </div>
         <!-- <div class="lg:block hidden containerRight bg-[url('imgs/patternpad.svg')] h-full bg-center bg-cover bg-no-repeat bg-center " style="transition:all 2s;"></div> -->
-    </section>
-    
-    <section class="2xl:container mx-auto lg:mt-0 mt-16" id="about_us_section">
-        <div class="containerLeft h-full">
-            <main class="lg:px-10 py-10 lg:py-36 bg-gray-100 h-full">
-                <h3 class="text-sm font-bold border-l-8 border-indigo-800 px-8 mt-12 mb-8 text-indigo-800">Our Thoughts</h3>
-                <h2 class="text-2xl lg:text-6xl font-thin px-8 mt-12 mb-8 leading-tight italic">
-                    "As a Creative Audio Agency,<br>
-                    our solutions are all part of one ecosystem,<br>
-                    bringing <a href="#!" class="font-bold" data-micron="bounce">production</a>, <span class="font-bold ">corporates</span> and <span class="font-bold ">artists</span> all into one mix.<br>
-                    You need <span class="font-bold ">creative solutions</span> to<br>
-                    enhance your artist / brand image,<br>
-                    but you also need people to listen.<br>
-                    This is where we come in.
-                    We have a team of <span class="font-bold ">professionals</span> from major radio stations,<br>
-                    <span class="font-bold ">podcast</span> creators, bollywood <span class="font-bold ">music</span> producers , <span class="font-bold ">sound designers & mastering engineers</span><br> 
-                    to get your artist’s / brand’s voice exactly where it needs to be. It’s vital to get your voice & ideas heard, and <span class="font-bold text-indigo-800">we’ll make it happen for you.</span> "
-                </h2>
-            </main>
-        </div>
-    </section>
-    
-    
-    <section class="2xl:container mx-auto h-screen linksSection grid grid-cols-3 hidden">
-        <div></div>
-        <ul class="grid items-center h-full p-24 2xl:p-64 col-span-2">
-            <a href="projects.html" class="w-full px-5 py-3 text-7xl 2xl:text-4xl font-thin hover:font-bold hover:pl-32 text-stroked"><i class="fas fa-arrow-right _45Degree"></i> &nbsp; Projects</a>
-            <li class="w-full px-5 py-3 text-7xl 2xl:text-4xl font-thin hover:font-bold hover:pl-32 text-stroked"><i class="fas fa-arrow-right _45Degree"></i> &nbsp; Equipments</li>
-            <li class="w-full px-5 py-3 text-5xl 2xl:text-4xl text-gray-400 font-thin"><i class="fas fa-minus"></i> &nbsp; Music Player (Coming Soon)</li>
-            <li class="w-full px-5 py-3 text-5xl 2xl:text-4xl text-gray-400 font-thin"><i class="fas fa-minus"></i> &nbsp; Gallery (Coming Soon)</li>
-        </ul>
     </section>
     
     <footer class="2xl:container mx-auto grid lg:grid-cols-8 items-center bg-gray-200">

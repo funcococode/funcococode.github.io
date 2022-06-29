@@ -31,7 +31,14 @@
             <main class="lg:px-10 lg:my-16 my-24">
                 <p class="px-8 border-l-8 border-indigo-800 text-gray-500 text-2xl font-thin">
                     <span class="font-bold text-indigo-800 text-sm mb-5 block">Something for you to listen 🤩👂 </span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="font-black text-black">Dignissimos</span> corrupti quam dicta velit,  distinctio <span class="font-black text-black">similique</span> exercitationem ea repellat accusantium laboriosam <span class="font-black text-black">perspiciatis</span> quod architecto esse accusamus <span class="font-black text-black">necessitatibus</span> fugiat. Nulla?
+                    To work is to play,<br>
+                    to play is to learn<br/>
+                    <b class="font-medium text-black">
+                        You might be interested to see,<br>
+                        what we have done! 
+                    </b>
+                    <br>
+                    <small class="text-xs text-gray-500 font-medium">*The below mentioned projects are for reference purpose only. No Infringement Intended.</small>
                 </p>
                 <ul class="mt-16 grid gap-3 md:p-0 p-2" id="projects_area"></ul>
             </main>
@@ -45,18 +52,18 @@
         <div class="col-span-2">
             <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="lg:w-full w-1/2"></center>
         </div>
-        <div class="col-span-6 grid grid-cols-2 lg:grid-cols-4 pb-16 lg:pb-0">
+        <div class="col-span-6 grid grid-cols-2 lg:grid-cols-12 pb-16 lg:pb-0 justify-items-center lg:justify-items-start">
             <div class="lg:col-span-2 hidden lg:block"></div> 
-            <ul class="lg:py-16 pr-16 px-8">
+            <ul class="lg:col-span-9 col-span-12 lg:py-16 pr-16 px-8 flex">
                 <a href="index.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
                 <a href="services.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
                 <!-- <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a> -->
                 <a href="Projects.html" class="md:block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Projects</a>
                 <!-- <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Gallery</a> -->
-            </ul>
-            <ul class="lg:py-16 pr-16 px-8 lg:px-0 grid">
                 <a href="index.html#about_us_section" class="block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">About us</a>
                 <a href="contact.html" class="block mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Contact Us</a>
+            </ul>
+            <!-- <ul class="lg:py-16 pr-16 px-8 lg:px-0 grid">
                 <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Terms of Services</li>
                 <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Privacy Policy</li>
                 <ul class="px-2 my-5 lg:block hidden">
@@ -65,7 +72,7 @@
                     <li class="inline-block text-xl mr-2"><i class="fab fa-youtube"></i></li>
                     <li class="inline-block text-xl mr-2"><i class="fab fa-spotify"></i></li>
                 </ul>
-            </ul>
+            </ul> -->
         </div>
     </footer>
 
@@ -82,8 +89,9 @@
                     </div>
                     <article class="col-span-4 text-md ">
                         ${item.description}
-                        <object data="${item.link}" class="mt-5"></object>
+                        <iframe src="${item.link}" class="mt-5"></iframe>
                     </article>
+                    <a href="${item.link}" class="mt-10 p-2 bg-green-400 text-center font-bold text-black rounded-md text-xs">Open Link</a>
                 </li>
             `).join("");
             elem.innerHTML = arr;
