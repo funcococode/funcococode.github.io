@@ -1,7 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   let locationName = location.pathname.toString().split('/')[1].split('.')[0];
-  if (locationName == "index") {locationName = "home"};
+  console.log(locationName);
+  if (locationName == "index" || !locationName) {locationName = "home"};
   document.getElementById('preloader_text').innerHTML = `Turning your browser towards <b class="font-black">${locationName}</b> page...`;
   setTimeout(function(){
     document.getElementById('preloader').classList.add('hide');
