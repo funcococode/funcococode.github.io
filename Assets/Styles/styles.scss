@@ -91,3 +91,13 @@
         transform: rotate(360deg) scale(0.8);
     }
 }
+
+
+
+
+#preloader_text{
+    top:80%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-transform: capitalize;
+}

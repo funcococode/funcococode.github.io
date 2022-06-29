@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-screen">
-    <!-- <div id="preloader" class="absolute inset-0 bg-indigo-800 flex items-center justify-center">
+<body class="h-screen preloaderActive">
+    <div id="preloader" class="absolute inset-0 bg-indigo-800 flex items-center justify-center">
         <div class="loader grid grid-cols-2 gap-2 border-4 border-indigo-700 p-4">
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
         </div>
-    </div> -->
+        <p id="preloader_text" class="absolute text-white text:sm lg:text-lg font-thin"></p>
+
+    </div>
     <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto">
         <div class="containerLeft lg:col-span-2">
             <nav class="grid lg:grid-cols-4 items-center">
@@ -26,6 +28,9 @@
                     <a href="index.html"><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class=""></a>
                 </div>
                 <ul class="navItems lg:col-span-3 grid grid-flow-col lg:gap-0 gap-3 lg:justify-end lg:gap-3 pr-10 lg:pr-10 lg:px-0 px-8">
+                    <a href="Projects.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Projects
+                    </a>
                     <a href="services.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Services
                     </a>
@@ -55,12 +60,13 @@
     </section>
     
     <footer class="2xl:container mx-auto grid lg:grid-cols-8 items-center bg-gray-200">
-        <div class="col-span-2">
-            <center><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="lg:w-full w-1/2"></center>
+        <div class="lg:col-span-2">
+            <center>
+                <img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class="lg:w-full w-1/2">
+            </center>
         </div>
-        <div class="col-span-6 grid grid-cols-2 lg:grid-cols-12 pb-16 lg:pb-0 justify-items-center lg:justify-items-start">
-            <div class="lg:col-span-2 hidden lg:block"></div> 
-            <ul class="lg:col-span-9 col-span-12 lg:py-16 pr-16 px-8 flex">
+        <div class="lg:col-span-6 grid pb-16 lg:pb-0 justify-items-center">
+            <ul class="pr-16 px-8 flex mb-5">
                 <a href="index.html" class="md:block text-sm md:text-base mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Home</a>
                 <a href="services.html" class="md:block text-sm md:text-base mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Services</a>
                 <!-- <a href="#!" class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Equipments</a> -->
@@ -69,16 +75,7 @@
                 <a href="index.html#about_us_section" class="md:block text-sm md:text-base mx-2 hover:underline hover:text-indigo-800 cursor-pointer">About us</a>
                 <a href="contact.html" class="md:block text-sm md:text-base mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Contact Us</a>
             </ul>
-            <!-- <ul class="lg:py-16 pr-16 px-8 lg:px-0 grid">
-                <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Terms of Services</li>
-                <li class="mx-2 hover:underline hover:text-indigo-800 cursor-pointer">Privacy Policy</li>
-                <ul class="px-2 my-5 lg:block hidden">
-                    <li class="inline-block text-xl mr-2"><i class="fab fa-instagram"></i></li>
-                    <li class="inline-block text-xl mr-2"><i class="fab fa-facebook-f"></i></li>
-                    <li class="inline-block text-xl mr-2"><i class="fab fa-youtube"></i></li>
-                    <li class="inline-block text-xl mr-2"><i class="fab fa-spotify"></i></li>
-                </ul>
-            </ul> -->
+            <small>Made with <i class="fa-solid fa-heart text-red-500"></i> by <b class="font-bold">Rachit Shrivastava</b></small>
         </div>
     </footer>
 
