@@ -20,6 +20,10 @@ const copyElements = document.querySelectorAll('.copy_able');
 
 copyElements.forEach(element => element.addEventListener('click',function(e){
     const copyText = e.target.parentElement.children[1].innerText;
+    const tagName = e.target.parentElement.tagName;
+    if(tagName == 'A'){
+      return;
+    }
     navigator.clipboard.writeText(copyText).then(function() {
         e.target.innerHTML = '<i class="fa-solid fa-check-double col-span-1"></i> Copied!';
         e.target.classList.add('bg-green-500')
