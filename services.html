@@ -22,12 +22,29 @@
 
     </div>
     <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto ">
+        <div id="mobileMenu" class="md:hidden fixed top-0 left-0 bg-indigo-800 text-white h-screen w-screen transition duration-500 p-16 py-64 grid gap-5 -translate-y-full opacity-0">
+            <button id="mobileMenuCloseBtn" class="absolute left-1/2 top-[90%] -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-white rounded-full">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            <a href="Projects.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Projects
+            </a>
+            <a href="services.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Services
+            </a>
+            <a href="contact.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Contact
+            </a>
+            <a href="gallery.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Gallery
+            </a>
+        </div>
         <div class="containerLeft lg:col-span-2">
             <nav class="grid lg:grid-cols-4 items-center">
                 <div class="logo">
                     <a href="index.html"><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class=""></a>
                 </div>
-                <ul class="navItems lg:col-span-3 grid grid-flow-col lg:gap-0 gap-3 lg:justify-end lg:gap-3 pr-10 lg:pr-10 lg:px-0 px-8">
+                <ul class="navItems hidden lg:col-span-3 md:grid grid-flow-col lg:gap-0 gap-3 lg:justify-end lg:gap-3 pr-10 lg:pr-10 lg:px-0 px-8">
                     <a href="Projects.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Projects
                     </a>
@@ -41,6 +58,11 @@
                         Gallery
                     </a>
                 </ul>
+                <div class="hamburger lg:hidden grid justify-items-center">
+                    <button id="mobileMenuOpenBtn">
+                        <i class="fas fa-bars text-3xl"></i>
+                    </button>
+                </div>
             </nav>
             <main class="lg:px-10 lg:my-16 my-24">
                 <p class="px-8 border-l-8 border-indigo-800 text-gray-500 text-2xl font-thin">

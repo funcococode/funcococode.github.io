@@ -1,7 +1,7 @@
 
+
 document.addEventListener('DOMContentLoaded', function() {
   let locationName = location.pathname.toString().split('/')[1].split('.')[0];
-  console.log(locationName);
   if (locationName == "index" || !locationName) {locationName = "home"};
   document.getElementById('preloader_text').innerHTML = `Turning your browser towards <b class="font-black">${locationName}</b> page...`;
   setTimeout(function(){
@@ -57,3 +57,16 @@ function loadMap(){
   // add popup to the marker
   marker.bindPopup("<b>Studio HR</b><br />Indore").openPopup()
 }
+
+const menuOpenBtn = document.querySelector('#mobileMenuOpenBtn');
+const menuCloseBtn = document.querySelector('#mobileMenuCloseBtn');
+const menu = document.querySelector('#mobileMenu');
+menuOpenBtn.addEventListener('click',()=>{
+    menu.classList.remove('-translate-y-full','opacity-0');
+    document.body.style.overflow = 'hidden';
+});
+
+menuCloseBtn.addEventListener('click',()=>{
+    menu.classList.add('-translate-y-full','opacity-0');
+    document.body.style.overflow = 'scroll';
+});

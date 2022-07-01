@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="./Assets/Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body class="h-screen preloaderActive">
+
     <div id="preloader" class="absolute inset-0 bg-indigo-800 flex items-center justify-center">
         <div class="loader grid grid-cols-2 gap-2 border-4 border-indigo-700 p-4">
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
@@ -20,35 +24,61 @@
         </div>
         <p id="preloader_text" class="absolute text-center text-white text:sm lg:text-lg font-thin"></p>
     </div>
-    <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto ">
+    <div id="filter"></div>
+    <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto min-h-screen">
+        <div id="mobileMenu" class="md:hidden fixed top-0 left-0 bg-indigo-800 text-white h-screen w-screen transition duration-500 p-16 py-64 grid gap-5 -translate-y-full opacity-0">
+            <button id="mobileMenuCloseBtn" class="absolute left-1/2 top-[90%] -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-white rounded-full">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            <a href="Projects.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Projects
+            </a>
+            <a href="services.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Services
+            </a>
+            <a href="contact.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Contact
+            </a>
+            <a href="gallery.html" class="text-3xl grid items-center justify-items-center font-bold">
+                Gallery
+            </a>
+        </div>
         <div class="containerLeft lg:col-span-2">
             <nav class="grid lg:grid-cols-4 items-center">
                 <div class="logo">
                     <a href="index.html"><img src="./imgs/StudioHR_LOGO.png" alt="Studio HR Logo" class=""></a>
                 </div>
-                <ul class="navItems lg:col-span-3 grid grid-flow-col lg:gap-0 gap-3 lg:justify-end lg:gap-3 pr-10 lg:pr-10 lg:px-0 px-8">
-                    <a href="services.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                <ul class="navItems hidden lg:col-span-3 md:grid grid-flow-col lg:gap-0 gap-3 lg:justify-end lg:gap-3 pr-10 lg:pr-10 lg:px-0 px-8">
+                    <a href="Projects.html" class="nav-links border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                        Projects
+                    </a>
+                    <a href="services.html" class="nav-links border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Services
                     </a>
-                    <a href="contact.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                    <a href="contact.html" class="nav-links border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Contact
                     </a>
-                    <a href="gallery.html" class="border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
+                    <a href="gallery.html" class="nav-links border text-center lg:border-none lg:text-left py-1 lg:px-5 lg:py-0 md:py-5 md:border-4 font-bold border-indigo-800 md:text-3xl lg:text-lg cursor-pointer text-indigo-800 hover:bg-indigo-800 hover:text-white transition rounded">
                         Gallery
                     </a>
                 </ul>
+                <div class="hamburger lg:hidden grid justify-items-center">
+                    <button id="mobileMenuOpenBtn">
+                        <i class="fas fa-bars text-3xl"></i>
+                    </button>
+                </div>
             </nav>
             <main class="lg:px-10 lg:my-16 my-24">
-                <h2 class="text-3xl md:text-6xl font-thin px-8 mt-12 mb-8 lg:mb-24 leading-tight">
+                <h2 id='landingLeadText' class="text-3xl md:text-6xl font-thin px-8 mt-12 mb-8 lg:mb-24 leading-tight">
                     Let's take your<br /><span class="font-black">creative ideas</span> along with your <span class="font-black">business</span> to the next level 
                 </h2>
-                <h5 class="px-5 lg:px-8 text-lg md:text-3xl lg:text-2xl text-gray-500 border-l-8 border-indigo-700 lg:mt-0 mt-16">
+                <h5 id="landingSubLeadText" class="px-5 lg:px-8 text-lg md:text-3xl lg:text-2xl text-gray-500 border-l-8 border-indigo-700 lg:mt-0 mt-16">
                     We are a creative audio production studio focused on audio design,<br>brand specific audio imaging, corporate campaigns and everything related to audio. 
                 </h5>
-                <a href="Projects.html" class="grid grid-cols-8 items-center justify-items-center md:justify-items-start md:bg-white bg-indigo-800 text-white md:w-fit md:mr-0 mr-10 ml-10 mt-16 2xl:mt-24 py-3 px-10 hover:px-16 border-4 border-indigo-700 md:text-indigo-700 hover:bg-indigo-800 hover:text-white rounded-lg text-xl font-bold" style="transition:all 0.12s"><span class="block col-span-7">Our Work </span><i class="fa-solid fa-arrow-right col-span-1"></i></a>
+                <a id="CTABtn" href="Projects.html" class="grid grid-cols-8 items-center justify-items-center md:justify-items-start md:bg-white bg-indigo-800 text-white md:w-fit md:mr-0 mr-10 ml-10 mt-16 2xl:mt-24 py-3 px-10 hover:px-16 border-4 border-indigo-700 md:text-indigo-700 hover:bg-indigo-800 hover:text-white rounded-lg text-xl font-bold" style="transition:all 0.12s"><span class="block col-span-7">Our Work </span><i class="fa-solid fa-arrow-right col-span-1"></i></a>
             </main>
         </div>
-        <div class="lg:block hidden containerRigh h-full">
+        <div class="lg:block hidden containerRight h-full">
             <iframe src='https://my.spline.design/noisedisplacecopy-98d1940b68d2ccab9a5c0307155e3d69/' frameborder='0' width='100%' height='100%'></iframe>
         </div>
         <!-- <div class="lg:block hidden containerRight bg-[url('imgs/patternpad.svg')] h-full bg-center bg-cover bg-no-repeat bg-center " style="transition:all 2s;"></div> -->
@@ -58,7 +88,7 @@
         <div class="containerLeft h-full">
             <main class="lg:px-10 py-10 lg:py-36 bg-gray-100 h-full">
                 <h3 class="text-sm font-bold border-l-8 border-indigo-800 px-8 mt-12 mb-8 text-indigo-800">Our Thoughts</h3>
-                <h2 class="text-2xl lg:text-6xl font-thin px-8 mt-12 mb-8 leading-tight italic">
+                <h2 id="aboutUs" class="text-2xl lg:text-6xl font-thin px-8 mt-12 mb-8 leading-tight italic">
                     "As a Creative Audio Agency,<br>
                     our solutions are all part of one ecosystem,<br>
                     bringing <a href="#!" class="font-bold" data-micron="bounce">production</a>, <span class="font-bold ">corporates</span> and <span class="font-bold ">artists</span> all into one mix.<br>
@@ -105,6 +135,6 @@
     </footer>
 
     <script src="./Assets/Scripts/main.js"></script>
-
+    <script src="./Assets/Scripts/gsap.js"></script>
 </body>
 </html>

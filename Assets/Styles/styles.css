@@ -265,4 +265,8 @@
 .form-icons.textarea {
   top: 25px;
 }
+
+#mobileMenu {
+  z-index: 999999;
+}
 /*# sourceMappingURL=styles.css.map */
