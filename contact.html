@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </head>
 <body class="h-screen preloaderActive">
     <div id="preloader" style="z-index:9999" class="absolute inset-0 bg-indigo-800 flex items-center justify-center">
@@ -26,8 +28,6 @@
             <div class="bg-indigo-600 text-center font-bold text-indigo-300 text-xl"></div>
         </div>
         <p id="preloader_text" class="absolute text-center text-white text:sm lg:text-lg font-thin"></p>
-
-
     </div>
     <section class="lg:2xl:container grid lg:grid-cols-3 lg:mx-auto ">
         <div class="containerLeft lg:col-span-2">
@@ -105,9 +105,7 @@
                         <div class="copy_able grid grid-cols-3 absolute inset-0 font-bold text-xl bg-indigo-800 text-white grid items-center justify-items-center">
                             <i class="fa-solid fa-clone col-span-1"></i> Click to copy
                         </div>
-                    </li>                    
-                                       
-                                       
+                    </li>                               
                 </ul>
             </main>
         </div>
@@ -115,7 +113,52 @@
         <!-- <div class="containerRight bg-[url('imgs/contact_pic.svg')] h-full bg-center bg-cover bg-no-repeat bg-center hover:bg-left-bottom" style="transition:all 2s;"></div> -->
     </section>
     
-    
+    <section id="contactFormSection" class="transition">
+
+        <form id="mailForm" class="lg:px-16 md:px-20 px-8 py-16 mt-10 rounded-xl lg:grid grid-cols-2 gap-16 items-center">
+            <p class="text-gray-200 font-regular lg:text-7xl pb-16 lg:leading-tight lg:block hidden">
+                Alternatively, You can fill out this <i class="fa-solid fa-arrow-right-long pointing_arrow"></i> <br>form and our <span class="text-indigo-800 font-medium">Studio</span> will reach out to you within 1 <span class="text-indigo-800 font-medium">HR</span>
+            </p>
+            <p class="text-gray-200 font-regular text-5xl pb-16 leading-tight lg:hidden block text-center">
+                <i class="fa-solid fa-grip-lines-vertical mb-10"></i> <br>
+                Alternatively, You can fill out the form below and our <span class="text-indigo-800 font-medium">Studio</span> will reach out to you within 1 <span class="text-indigo-800 font-medium">HR</span>
+                <br><i class="mt-10 fa-solid fa-arrow-down-long "></i>
+            </p>
+            <div class="grid gap-10 lg:pl-16">
+                <div class="flex gap-5">
+                    <div class="flex-1 relative">
+                        <input type="text" name="name" id="name" class="peer bg-gray-100 appearance-none rounded w-full p-4 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline hover:ring hover:ring-blue-200 focus:ring focus:ring-blue-800" placeholder="Jane Doe" required>
+                        <i class="fa-solid fa-user form-icons text-gray-400 peer-focus:-translate-y-full peer-focus:-translate-x-1/2 peer-focus:opacity-0 transition"></i>
+                        <i class="fa-solid fa-user form-icons text-indigo-800 translate-y-full -translate-x-1/2 peer-focus:-translate-y-1/2 opacity-0 peer-focus:opacity-100 transition"></i>
+                    </div>
+                    <div class="flex-1 relative">
+                        <input type="email" name="email" id="email" class="peer bg-gray-100 appearance-none rounded w-full p-4 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline hover:ring hover:ring-blue-200 focus:ring focus:ring-blue-800" placeholder="Jane@mail.com" required>
+                        <i class="fa-solid fa-at form-icons text-gray-400 peer-focus:-translate-y-full peer-focus:-translate-x-1/2 peer-focus:opacity-0 transition"></i>
+                        <i class="fa-solid fa-at form-icons text-indigo-800 translate-y-full -translate-x-1/2 peer-focus:-translate-y-1/2 opacity-0 peer-focus:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <input type="text" name="subject" id="subject" class="peer bg-gray-100 appearance-none rounded w-full p-4 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline hover:ring hover:ring-blue-200 focus:ring focus:ring-blue-800" placeholder="Subject" required>
+                    <i class="fa-solid fa-pen form-icons text-gray-400 peer-focus:-translate-y-full peer-focus:-translate-x-1/2 peer-focus:opacity-0 transition"></i>
+                    <i class="fa-solid fa-pen form-icons text-indigo-800 translate-y-full -translate-x-1/2 peer-focus:-translate-y-1/2 opacity-0 peer-focus:opacity-100 transition"></i>
+                </div>
+                <div class="relative">
+                    <textarea name="message" id="message" class="peer h-32 bg-gray-100 appearance-none rounded w-full p-4 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline hover:ring hover:ring-blue-200 focus:ring focus:ring-blue-800" placeholder="Write your message here..." required></textarea>
+                    <i class="fa-solid fa-envelope-open-text form-icons textarea text-gray-400 peer-focus:-translate-y-full peer-focus:-translate-x-1/2 peer-focus:opacity-0 transition"></i>
+                    <i class="fa-solid fa-envelope-open-text form-icons textarea text-indigo-800 translate-y-full -translate-x-1/2 peer-focus:-translate-y-1/2 opacity-0 peer-focus:opacity-100 transition"></i>
+                </div>
+                <div>
+                    <button id="mailSubmitBtn" type="submit" class="md:w-fit w-full bg-indigo-800 hover:bg-green-400 text-white font-bold py-4 px-10 rounded focus:outline-none focus:shadow-outline lg:flex text-center gap-5 items-center justify-items-center">
+                        Send
+                        <i class="ml-3 md:ml-0 fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+
+    </section>
     
     <footer class="2xl:container mx-auto grid lg:grid-cols-8 items-center bg-gray-200">
         <div class="lg:col-span-2">
@@ -137,5 +180,6 @@
     </footer>
 
     <script src="./Assets/Scripts/main.js"></script>
+    <script src="./Assets/Scripts/mail.js"></script>
 </body>
 </html>

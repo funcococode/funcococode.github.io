@@ -24,9 +24,12 @@
 }
 
 .containerRight{
+    transition: all 0.23s ease-in-out;
     clip-path: ellipse(50% 40% at 84% 1%);
     animation: clipAnim infinite 20s alternate;
-    background-blend-mode: difference;
+    &:hover{
+        animation-play-state: paused;
+    }
 }
 
 @keyframes clipAnim {
@@ -36,7 +39,7 @@
     }
     50%{
         background-color: rgb(12, 82, 38);
-        clip-path: ellipse(81% 57% at 82% 14%);
+        clip-path: ellipse(81% 54% at 82% 14%);
         background-position: 50% -20%;
     }
     100%{
@@ -115,5 +118,60 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
+    }
+}
+
+
+#filter{
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    background: rgb(255, 255, 255);
+    filter: grayscale(100%);
+    mix-blend-mode: difference;
+    z-index: 10000000;
+    pointer-events: none;
+
+    transition: all 2s;
+}
+
+
+.spinner {
+    animation : spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.pointing_arrow{
+    animation: pointing 2s ease-in-out infinite;
+}
+
+@keyframes pointing {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(30px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.form-icons{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:25px;
+    transform: translate(-50%,-50%);
+
+    &.textarea{
+        top:25px;
     }
 }
