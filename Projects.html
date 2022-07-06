@@ -64,7 +64,7 @@
                 </div>
             </nav>
             <main class="lg:px-10 lg:my-16 my-24">
-                <p class="px-8 border-l-8 border-indigo-800 text-gray-500 text-2xl font-thin">
+                <p class="px-8 border-l-8 border-indigo-800 text-gray-500 text-3xl font-thin">
                     <span class="font-bold text-indigo-800 text-sm mb-5 block">Something for you to listen 🤩👂 </span>
                     To work is to play,<br>
                     to play is to learn<br/>
@@ -73,8 +73,8 @@
                         what we have done! 
                     </b>
                     <br>
-                    <small class="text-xs text-gray-500 font-medium">*The below mentioned projects are for reference purpose only. No Infringement Intended.</small>
                 </p>
+                <p class="mt-8 bg-yellow-100 text-yellow-700 rounded-lg p-3 w-1/2 text-xs text-gray-500 font-medium">The below mentioned projects are for reference purpose only. The work links with a yellow dot were produced during the employment tenure for the respective employer. Any kind of copyright infringement not intended.</p>
                 <ul class="mt-16 grid gap-3 md:p-0 p-2" id="projects_area"></ul>
             </main>
         </div>
@@ -109,7 +109,8 @@
         let arr = [];
         let json = fetch('./projects.json').then(data => data.json()).then(result => {
             arr = result.map(item => `
-                <li class="group p-8 grid font-thin md:grid-cols-9 items-center border border-gray-200 hover:border-black transition">
+                <li class="relative overflow-hidden group p-8 grid font-thin md:grid-cols-9 items-center border border-gray-200 hover:border-black transition">
+                    ${item.flag ? "<div class='flag bg-yellow-500'></div>" : "<div class='hidden'></div>"}
                     <h2 class="col-span-2 text-gray-300 text-4xl md:text-6xl group-hover:font-bold group-hover:text-black" style="transition:all 0.2s;">${item.id}</h2>
                     <div class="col-span-3 md:pt-0 pt-5">
                         <p class="text-gray-500 text-xl">${item.name}</p>

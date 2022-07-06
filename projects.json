@@ -22,6 +22,7 @@
     },
     {
         "id" : "03",
+        "flag" : true,
         "name" : "Radio Mirchi",
         "description" : "The Devdutt Pattanaik Show for India, US and Dubai",
         "tags" : ["Radio","International","Podcast"],
@@ -29,6 +30,7 @@
     },
     {
         "id" : "04",
+        "flag" : true,
         "name" : "Radio Mirchi",
         "description" : "World Suicide Prevention Day - With top Radio Jockeys",
         "tags" : ["Radio ","Jingle"],
@@ -36,6 +38,7 @@
     },
     {
         "id" : "05",
+        "flag" : true,
         "name" : "Radio Mirchi",
         "description" : "Bhatt Naturally - The Pooja & Mahesh Bhatt Show for India, US & Dubai",
         "tags" : ["Radio","Show","International","Podcast"],
@@ -43,6 +46,7 @@
     },
     {
         "id" : "06",
+        "flag" : true,
         "name" : "Radio Mirchi",
         "description" : "Indie Songs Countdown Show for India, US & Dubai",
         "tags" : ["Radio","Show","International"],
@@ -50,6 +54,7 @@
     },
     {
         "id" : "07",
+        "flag" : true,
         "name" : "Radio Mirchi",
         "description" : "National Jingle of Holi Campaign - Aman ka Rang Safed",
         "tags" : ["Radio","Show","Jingle"],
